@@ -16,7 +16,9 @@ count=0
 # Decryption Process
 for file in target_files:
 	count += 1
+	# adding more comments to verify changes on remote
 	print(f"\nReading File #{count}: {file}")
+	print("...")
 	with open(file,"rb") as file_object:
 		encrypted_content = file_object.read()
 	decrypted_content = fernet_instance.decrypt(encrypted_content)
